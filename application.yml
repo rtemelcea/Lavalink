@@ -1,6 +1,6 @@
 server:
   host: "localhost"
-  port: 2333 # WS port
+  port: 2333 #port
 lavalink:
   server:
     password: "youshallnotpass"
