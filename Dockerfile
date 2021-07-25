@@ -1,5 +1,5 @@
 FROM adoptopenjdk/openjdk11:latest
-ADD http://www.convert-unix-time.com/api?timestamp=now /tmp/bustcache
+ARG CACHEBUST=1
 WORKDIR /opt/
 RUN apt-get update
 RUN apt-get install -y git
