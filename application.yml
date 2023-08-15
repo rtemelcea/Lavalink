@@ -16,6 +16,9 @@ lavalink:
     sentryDsn: ""
     bufferDurationMs: 400
     youtubePlaylistLoadLimit: 10000
+    youtubeConfig:
+      email: "temelcearazvan@gmail.com"
+      password: "9ipnkFVe3adCLLw"
 logging:
   file:
     max-history: 7
