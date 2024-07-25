@@ -2,6 +2,9 @@ server:
   host: "localhost"
   port: 2333 #port
 lavalink:
+  plugins:
+    dependency: "dev.lavalink.youtube:youtube-plugin:1.5.0"
+    repository: "https://maven.lavalink.dev/releases"
   server:
     password: "youshallnotpass"
     sources:
