@@ -60,5 +60,6 @@ sentry:
   dsn: ''
   environment: ''
 server:
-  address: localhost
+  address: 0.0.0.0
+  password: "youshallnotpass"
   port: 2333
