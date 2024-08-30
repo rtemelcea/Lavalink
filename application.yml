@@ -61,5 +61,4 @@ sentry:
   environment: ''
 server:
   address: 0.0.0.0
-  password: "youshallnotpass"
   port: 2333
