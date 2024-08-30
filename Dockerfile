@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11:latest
+FROM openjdk:latest
 ARG CACHEBUST=1
 WORKDIR /opt/
 RUN apt-get update
