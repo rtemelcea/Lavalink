@@ -1,5 +1,4 @@
-FROM debian:stable-slim
-FROM openjdk:latest
+FROM eclipse-temurin:latest
 ARG CACHEBUST=1
 WORKDIR /opt/
 RUN apt-get update
