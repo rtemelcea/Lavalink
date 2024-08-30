@@ -1,3 +1,4 @@
+FROM debian:stable-slim
 FROM openjdk:latest
 ARG CACHEBUST=1
 WORKDIR /opt/
