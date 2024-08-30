@@ -1,33 +1,64 @@
-server:
-  host: "localhost"
-  port: 2333 #port
 lavalink:
   plugins:
-    dependency: "dev.lavalink.youtube:youtube-plugin:1.5.0"
-    repository: "https://maven.lavalink.dev/releases"
+  - dependency: dev.lavalink.youtube:youtube-plugin:1.7.2
+    repository: https://maven.lavalink.dev/releases
   server:
-    password: "youshallnotpass"
+    bufferDurationMs: 400
+    frameBufferDurationMs: 1000
+    gc-warnings: true
+    password: youshallnotpass
+    playerUpdateInterval: 1
+    soundcloudSearchEnabled: true
     sources:
-      youtube: true
       bandcamp: true
+      http: true
+      local: true
       soundcloud: true
       twitch: true
       vimeo: true
-      mixer: true
-      http: true
-      local: true
-    sentryDsn: ""
-    bufferDurationMs: 400
-    youtubePlaylistLoadLimit: 10000
+      youtube: false
+    youtubePlaylistLoadLimit: 100
+    youtubeSearchEnabled: true
     youtubeConfig:
       email: "temelcearazvan@gmail.com"
       password: "xwid bsyz ktkk eeuo"
 logging:
   file:
-    max-history: 7
-    max-size: 1GB
-  path: ./logs/
+    path: ./logs/
   level:
-    root: INFO
     lavalink: INFO
-
+    root: INFO
+  logback:
+    rollingpolicy:
+      max-history: 15
+      max-size: 10MB
+metrics:
+  prometheus:
+    enabled: false
+    endpoint: /metrics
+plugins:
+  youtube:
+    TVHTML5EMBEDDED:
+      playlistLoading: false
+      searching: false
+      videoLoading: false
+    WEB:
+      playback: true
+    allowDirectPlaylistIds: true
+    allowDirectVideoIds: true
+    allowSearch: true
+    clients:
+    - MUSIC
+    - WEB
+    - ANDROID_TESTSUITE
+    - TVHTML5EMBEDDED
+    - ANDROID_LITE
+    - MEDIA_CONNECT
+    - IOS
+    enabled: true
+sentry:
+  dsn: ''
+  environment: ''
+server:
+  address: localhost
+  port: 2333
