@@ -16,12 +16,9 @@ lavalink:
       soundcloud: true
       twitch: true
       vimeo: true
-      youtube: false
+      youtube: true
     youtubePlaylistLoadLimit: 100
     youtubeSearchEnabled: true
-    youtubeConfig:
-      email: "temelcearazvan@gmail.com"
-      password: "xwid bsyz ktkk eeuo"
 logging:
   file:
     path: ./logs/
