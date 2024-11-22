@@ -19,9 +19,6 @@ lavalink:
       youtube: false
     youtubePlaylistLoadLimit: 100
     youtubeSearchEnabled: true
-    youtubeConfig:
-      email: "temelcearazvan@gmail.com"
-      password: "ydwi zakl iyau mfjg"
 logging:
   file:
     path: ./logs/
@@ -38,24 +35,24 @@ metrics:
     endpoint: /metrics
 plugins:
   youtube:
+    clients:
+      - MUSIC
+      - WEB
+      - WEBEMBEDDED
+      - ANDROID_TESTSUITE
+      - TVHTML5EMBEDDED
+      - MEDIA_CONNECT
+      - IOS
+    enabled: true
     TVHTML5EMBEDDED:
       playlistLoading: false
       searching: false
       videoLoading: false
     WEB:
       playback: true
-    allowDirectPlaylistIds: true
-    allowDirectVideoIds: true
-    allowSearch: true
-    clients:
-    - MUSIC
-    - WEB
-    - ANDROID_TESTSUITE
-    - TVHTML5EMBEDDED
-    - ANDROID_LITE
-    - MEDIA_CONNECT
-    - IOS
-    enabled: true
+      allowDirectPlaylistIds: true
+      allowDirectVideoIds: true
+      allowSearch: true
 sentry:
   dsn: ''
   environment: ''
