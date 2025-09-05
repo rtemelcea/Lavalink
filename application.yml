@@ -1,6 +1,6 @@
 lavalink:
   plugins:
-  - dependency: dev.lavalink.youtube:youtube-plugin:1.13.3
+  - dependency: dev.lavalink.youtube:youtube-plugin:1.13.5
     repository: https://maven.lavalink.dev/releases
   server:
     bufferDurationMs: 400
@@ -35,24 +35,66 @@ metrics:
     endpoint: /metrics
 plugins:
   youtube:
+    allowDirectPlaylistIds: true
+    allowDirectVideoIds: true
+    allowSearch: true
+    clientOptions:
+      ANDROID_MUSIC:
+        playback: true
+        playlistLoading: false
+        searching: true
+        videoLoading: true
+      ANDROID_VR:
+        playback: true
+        playlistLoading: true
+        searching: true
+        videoLoading: true
+      IOS:
+        playback: true
+        playlistLoading: true
+        searching: true
+        videoLoading: true
+      MUSIC:
+        playback: false
+        playlistLoading: false
+        searching: true
+        videoLoading: false
+      MWEB:
+        playback: true
+        playlistLoading: true
+        searching: true
+        videoLoading: true
+      TV:
+        playback: false
+        playlistLoading: false
+        searching: false
+        videoLoading: false
+      TVHTML5EMBEDDED:
+        playback: false
+        playlistLoading: false
+        searching: true
+        videoLoading: true
+      WEB:
+        playback: true
+        playlistLoading: true
+        searching: true
+        videoLoading: true
+      WEBEMBEDDED:
+        playback: true
+        playlistLoading: false
+        searching: false
+        videoLoading: true
     clients:
-      - MUSIC
-      - WEB
-      - WEBEMBEDDED
-      - ANDROID_TESTSUITE
-      - TVHTML5EMBEDDED
-      - MEDIA_CONNECT
-      - IOS
+    - MUSIC
+    - WEBEMBEDDED
+    - ANDROID_VR
+    - ANDROID_MUSIC
+    - TVHTML5EMBEDDED
+    - TV
+    - IOS
+    - WEB
+    - MWEB
     enabled: true
-    TVHTML5EMBEDDED:
-      playlistLoading: false
-      searching: false
-      videoLoading: false
-    WEB:
-      playback: true
-      allowDirectPlaylistIds: true
-      allowDirectVideoIds: true
-      allowSearch: true
 sentry:
   dsn: ''
   environment: ''
